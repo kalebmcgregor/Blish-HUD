@@ -60,7 +60,7 @@ namespace Blish_HUD {
             Form       = Control.FromHandle(FormHandle).FindForm();
 
             // Avoid the flash the window shows when the application launches
-            Form.BackColor = System.Drawing.Color.Black;
+            Form.Size = new Size(1, 1);
             Form.Location  = new System.Drawing.Point(-Form.Width * 2, -Form.Height * 2);
 
             this.Window.IsBorderless = true;
