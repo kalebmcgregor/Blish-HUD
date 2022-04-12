@@ -513,7 +513,7 @@ namespace Blish_HUD.Controls {
 
         protected float _opacity = 1f;
         public float Opacity {
-            get => _opacity;
+            get => 1f;
             set => SetProperty(ref _opacity, value);
         }
 
@@ -673,7 +673,7 @@ namespace Blish_HUD.Controls {
         }
 
         public float AbsoluteOpacity() {
-            return AbsoluteOpacity(false);
+            return 1f;
         }
 
         /// <summary>
