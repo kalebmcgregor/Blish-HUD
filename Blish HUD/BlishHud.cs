@@ -45,8 +45,8 @@ namespace Blish_HUD {
                 args.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 4;
             };
 
-            this.ActiveGraphicsDeviceManager.GraphicsProfile     = GraphicsProfile.HiDef;
-            this.ActiveGraphicsDeviceManager.PreferMultiSampling = true;
+            this.ActiveGraphicsDeviceManager.GraphicsProfile     = GraphicsProfile.Reach;
+            this.ActiveGraphicsDeviceManager.PreferMultiSampling = false;
 
             this.ActiveContentManager = this.Content;
 
