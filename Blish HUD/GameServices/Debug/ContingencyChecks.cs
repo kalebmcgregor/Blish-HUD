@@ -52,8 +52,9 @@ namespace Blish_HUD.Debug {
                         if (File.Exists(cfaTestFile) && File.ReadAllText(cfaTestFile) == "cfa") {
                             File.Delete(cfaTestFile);
                         }
-                    } catch (Exception) {
+                    } catch (Exception ex) {
                         // The chances that this isn't CFA are pretty slim.
+                        Logger.GetLogger(typeof(ContingencyChecks)).Error(ex, "Failed to write cfa file");
                         Contingency.NotifyCfaBlocking(DirectoryUtil.BasePath);
                     }
                 }
