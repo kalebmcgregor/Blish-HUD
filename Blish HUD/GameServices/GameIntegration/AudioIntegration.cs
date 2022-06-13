@@ -159,7 +159,7 @@ namespace Blish_HUD.GameIntegration {
             } catch (COMException ex) when ((uint)ex.HResult == 0x80070490) {
                 // HResult 0x80070490 = Element not found
                 device = null;
-                Logger.Warn(e, "Fail in TryGetDefaultAudioEndpoint.");
+                Logger.Warn(ex, "Fail in TryGetDefaultAudioEndpoint.");
                 return false;
             }
         }
@@ -175,15 +175,15 @@ namespace Blish_HUD.GameIntegration {
                     sessionEnumerator = device.AudioSessionManager.Sessions;
                 } catch (COMException ex) when ((uint)ex.HResult == 0x88890008) {
                     // Skip this audio device.  Something about it is unsupported.
-                    Logger.Warn(e, "Fail in 0x88890008.");
+                    Logger.Warn(ex, "Fail in 0x88890008.");
                     continue;
                 } catch (COMException ex) when ((uint)ex.HResult == 0x80040154) {
                     // Skip this audio device.  Something about it is unsupported.
-                    Logger.Warn(e, "Fail in 0x80040154.");
+                    Logger.Warn(ex, "Fail in 0x80040154.");
                     continue;
                 } catch (COMException ex) when ((uint)ex.HResult == 0x80070490) {
                     // Skip this audio device.  Something about it is unsupported.
-                    Logger.Warn(e, "Fail in 0x80070490.");
+                    Logger.Warn(ex, "Fail in 0x80070490.");
                     continue;
                 } catch (Exception) {
                     continue; 
