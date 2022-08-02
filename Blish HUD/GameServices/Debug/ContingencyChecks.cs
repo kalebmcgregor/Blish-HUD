@@ -28,9 +28,9 @@ namespace Blish_HUD.Debug {
         /// </summary>
         private static void CheckMinTls12() {
             // https://link.blishhud.com/tls12issue
-            if (!ServicePointManager.SecurityProtocol.HasFlag(SecurityProtocolType.Tls12)) {
-                ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
-            }
+            //if (!ServicePointManager.SecurityProtocol.HasFlag(SecurityProtocolType.Tls12)) {
+            //    ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
+            //}
         }
 
         /// <summary>
